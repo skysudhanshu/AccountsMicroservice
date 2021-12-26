@@ -277,7 +277,7 @@ namespace AccountsMicroservice.Repository
             TransactionStatus ts = new TransactionStatus() ;
 
             Account ac = new Account() ;
-            ac = s_accountList.Find(e => e.AccountId == accountId);
+            ac = await s_accountList.FindAsync(e => e.AccountId == accountId);
 
 
             if(ac != null)
